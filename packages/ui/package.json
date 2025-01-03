@@ -1,28 +1,65 @@
 {
-  "name": "@repo/ui",
+  "name": "@kit/ui",
   "version": "0.0.0",
   "private": true,
-  "exports": {
-    "./button": "./src/button.tsx",
-    "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx"
-  },
+  "main": "./src/index.ts",
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component"
+    "clean": "git clean -xdf .turbo node_modules",
+    "format": "prettier --check \"**/*.{ts,tsx}\"",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "@turbo/gen": "^1.12.4",
-    "@types/node": "^20.11.24",
+    "@kit/eslint-config": "workspace:*",
+    "@kit/prettier-config": "workspace:*",
+    "@kit/tailwind-config": "workspace:*",
+    "@kit/typescript-config": "workspace:*",
     "@types/eslint": "^8.56.5",
-    "@types/react": "^18.2.61",
-    "@types/react-dom": "^18.2.19",
+    "@types/node": "^22.7.5",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
     "eslint": "^8.57.0",
-    "typescript": "^5.3.3"
+    "react-native": "^0.76.5",
+    "typescript": "^5.7.2"
   },
   "dependencies": {
-    "react": "^18.2.0"
-  }
+    "@react-native-async-storage/async-storage": "^2.1.0",
+    "@rn-primitives/accordion": "^1.1.0",
+    "@rn-primitives/alert-dialog": "^1.1.0",
+    "@rn-primitives/avatar": "^1.1.0",
+    "@rn-primitives/checkbox": "^1.1.0",
+    "@rn-primitives/collapsible": "^1.1.0",
+    "@rn-primitives/dialog": "^1.1.0",
+    "@rn-primitives/dropdown-menu": "^1.1.0",
+    "@rn-primitives/hover-card": "^1.1.0",
+    "@rn-primitives/label": "^1.1.0",
+    "@rn-primitives/menubar": "^1.1.0",
+    "@rn-primitives/navigation-menu": "^1.1.0",
+    "@rn-primitives/popover": "^1.1.0",
+    "@rn-primitives/progress": "^1.1.0",
+    "@rn-primitives/radio-group": "^1.1.0",
+    "@rn-primitives/select": "^1.1.0",
+    "@rn-primitives/separator": "^1.1.0",
+    "@rn-primitives/slot": "^1.1.0",
+    "@rn-primitives/switch": "^1.1.0",
+    "@rn-primitives/table": "^1.1.0",
+    "@rn-primitives/tabs": "^1.1.0",
+    "@rn-primitives/toggle": "^1.1.0",
+    "@rn-primitives/toggle-group": "^1.1.0",
+    "@rn-primitives/types": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react-native": "^0.469.0",
+    "nativewind": "4.1.23",
+    "react": "^18.3.1",
+    "react-native-svg": "^15.10.1",
+    "tailwind-merge": "^2.6.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@kit/eslint-config/react-internal.js"
+    ]
+  },
+  "prettier": "@kit/prettier-config"
 }
