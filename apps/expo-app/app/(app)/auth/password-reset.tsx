@@ -1,5 +1,6 @@
 import { LogoImage } from '@/components/logo';
 import { Link } from 'expo-router';
+
 import {
   AuthPageLayout,
   AuthPageLayoutDescription,

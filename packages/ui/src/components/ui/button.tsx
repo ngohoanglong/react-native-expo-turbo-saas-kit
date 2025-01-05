@@ -1,7 +1,9 @@
 import * as React from 'react';
+
 import * as Slot from '@rn-primitives/slot';
-import { cva, type VariantProps } from 'class-variance-authority';
+import { type VariantProps, cva } from 'class-variance-authority';
 import { Pressable } from 'react-native';
+
 import { cn } from '../../lib/utils';
 import { TextClassContext } from './text';
 

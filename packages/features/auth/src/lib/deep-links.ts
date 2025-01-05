@@ -1,7 +1,9 @@
 import { useCallback } from 'react';
+
 import { makeRedirectUri } from 'expo-auth-session';
 import * as QueryParams from 'expo-auth-session/build/QueryParams';
 import * as WebBrowser from 'expo-web-browser';
+
 import { useSupabase } from '@kit/supabase';
 
 export function useCreateDeepLink() {

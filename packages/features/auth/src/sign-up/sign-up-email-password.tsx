@@ -1,9 +1,12 @@
 import { useState } from 'react';
+
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm } from 'react-hook-form';
 import { View } from 'react-native';
+
 import { useSignUpWithEmailAndPassword } from '@kit/supabase';
 import { Button, Input, Text } from '@kit/ui';
+
 import { useCreateDeepLink } from '../lib/deep-links';
 import { EmailPasswordSchema } from '../lib/schema';
 

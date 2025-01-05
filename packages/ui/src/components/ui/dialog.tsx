@@ -1,7 +1,9 @@
 import * as React from 'react';
+
 import * as DialogPrimitive from '@rn-primitives/dialog';
 import { Platform, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
+
 import { X } from '../../lib/icons/X';
 import { cn } from '../../lib/utils';
 

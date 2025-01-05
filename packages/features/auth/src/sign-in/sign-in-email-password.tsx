@@ -2,8 +2,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Link } from 'expo-router';
 import { Controller, useForm } from 'react-hook-form';
 import { View } from 'react-native';
+
 import { useSignInWithEmailPassword } from '@kit/supabase';
 import { Button, Input, Text } from '@kit/ui';
+
 import { EmailPasswordSchema } from '../lib/schema';
 
 export function SignInEmailPassword() {

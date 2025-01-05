@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
+
 import { AppState } from 'react-native';
+
 import { useAuthChangeListener, useSupabase, useUser } from '../hooks';
 
 export function AuthProvider(props: React.PropsWithChildren) {
@@ -10,8 +12,6 @@ export function AuthProvider(props: React.PropsWithChildren) {
   useAuthChangeListener({
     appHomePath: '/',
   });
-
-  console.log(user.data);
 
   const childrenArray = React.Children.toArray(props.children);
 

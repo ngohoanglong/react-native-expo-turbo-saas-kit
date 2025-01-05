@@ -1,7 +1,9 @@
 import * as React from 'react';
+
 import * as HoverCardPrimitive from '@rn-primitives/hover-card';
 import { Platform, StyleSheet } from 'react-native';
 import Animated, { FadeIn } from 'react-native-reanimated';
+
 import { cn } from '../../lib/utils';
 import { TextClassContext } from './text';
 

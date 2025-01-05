@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import * as DropdownMenuPrimitive from '@rn-primitives/dropdown-menu';
 import {
   Platform,
@@ -8,6 +9,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
+
 import { Check } from '../../lib/icons/Check';
 import { ChevronDown } from '../../lib/icons/ChevronDown';
 import { ChevronRight } from '../../lib/icons/ChevronRight';

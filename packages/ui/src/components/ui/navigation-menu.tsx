@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import * as NavigationMenuPrimitive from '@rn-primitives/navigation-menu';
 import { cva } from 'class-variance-authority';
 import { Platform, View } from 'react-native';
@@ -11,6 +12,7 @@ import Animated, {
   useDerivedValue,
   withTiming,
 } from 'react-native-reanimated';
+
 import { ChevronDown } from '../../lib/icons/ChevronDown';
 import { cn } from '../../lib/utils';
 

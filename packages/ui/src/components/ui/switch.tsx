@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import * as SwitchPrimitives from '@rn-primitives/switch';
 import { Platform } from 'react-native';
 import Animated, {
@@ -7,6 +8,7 @@ import Animated, {
   useDerivedValue,
   withTiming,
 } from 'react-native-reanimated';
+
 import { useColorScheme } from '../../lib/use-color-scheme';
 import { cn } from '../../lib/utils';
 

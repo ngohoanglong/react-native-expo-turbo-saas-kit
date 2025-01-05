@@ -1,5 +1,7 @@
 import { useMemo } from 'react';
+
 import type { SupabaseClient } from '@supabase/supabase-js';
+
 import { getSupabaseBrowserClient } from '../client';
 import { Database } from '../database.types';
 

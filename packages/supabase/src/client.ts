@@ -1,6 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
+
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { z } from 'zod';
+
 import { Database } from './database.types';
 
 const { supabaseUrl, supabaseAnonKey } = z

@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+
 import { useSupabase } from './use-supabase';
 
 const queryKey = ['supabase', 'user'];

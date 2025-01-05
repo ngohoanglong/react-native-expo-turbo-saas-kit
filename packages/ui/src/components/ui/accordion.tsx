@@ -1,17 +1,19 @@
 import * as React from 'react';
+
 import * as AccordionPrimitive from '@rn-primitives/accordion';
 import { Platform, Pressable, View } from 'react-native';
 import Animated, {
   Extrapolation,
   FadeIn,
   FadeOutUp,
-  interpolate,
   LayoutAnimationConfig,
   LinearTransition,
+  interpolate,
   useAnimatedStyle,
   useDerivedValue,
   withTiming,
 } from 'react-native-reanimated';
+
 import { ChevronDown } from '../../lib/icons/ChevronDown';
 import { cn } from '../../lib/utils';
 import { TextClassContext } from './text';

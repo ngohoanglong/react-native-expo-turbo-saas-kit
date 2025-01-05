@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
+
 import * as Linking from 'expo-linking';
+import { router } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
+
 import { useCreateSessionFromUrl } from '@kit/auth';
 
 export default function CallbackPage() {
@@ -11,13 +14,15 @@ export default function CallbackPage() {
 
   useEffect(() => {
     (async () => {
-      console.log('url', await Linking.parseInitialURLAsync());
       if (!url || !url.includes('callback')) {
         return;
       }
 
       const session = await createSessionFromUrl(url);
-      console.log(session);
+
+      if (session) {
+        return router.replace('/');
+      }
     })();
 
     return () => {
@@ -25,5 +30,5 @@ export default function CallbackPage() {
     };
   }, [createSessionFromUrl, url]);
 
-  return <></>;
+  return null;
 }

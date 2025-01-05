@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import * as ProgressPrimitive from '@rn-primitives/progress';
 import { Platform, View } from 'react-native';
 import Animated, {
@@ -8,6 +9,7 @@ import Animated, {
   useDerivedValue,
   withSpring,
 } from 'react-native-reanimated';
+
 import { cn } from '../../lib/utils';
 
 const Progress = React.forwardRef<

@@ -1,5 +1,7 @@
 import * as React from 'react';
+
 import * as AvatarPrimitive from '@rn-primitives/avatar';
+
 import { cn } from '../../lib/utils';
 
 const AvatarPrimitiveRoot = AvatarPrimitive.Root;

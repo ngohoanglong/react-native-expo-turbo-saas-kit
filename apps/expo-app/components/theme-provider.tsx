@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ThemeProvider } from '@react-navigation/native';
 import { SplashScreen } from 'expo-router';
 import { Platform } from 'react-native';
+
 import { NAV_THEME, useColorScheme } from '@kit/ui';
 
 export function GlobalThemeProvider({

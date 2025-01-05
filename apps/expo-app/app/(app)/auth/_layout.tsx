@@ -1,4 +1,5 @@
 import { Redirect, Stack } from 'expo-router';
+
 import {
   AuthProvider,
   AuthProviderSignedIn,

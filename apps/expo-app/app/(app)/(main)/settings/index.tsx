@@ -1,6 +1,7 @@
 import { Link } from 'expo-router';
 import { ChevronRight } from 'lucide-react-native';
 import { FlatList, View } from 'react-native';
+
 import { useSignOut } from '@kit/supabase';
 import { Button, Text } from '@kit/ui';
 

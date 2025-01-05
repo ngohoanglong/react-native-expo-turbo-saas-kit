@@ -1,6 +1,8 @@
 import * as React from 'react';
+
 import * as MenubarPrimitive from '@rn-primitives/menubar';
 import { Platform, Text, View } from 'react-native';
+
 import { Check } from '../../lib/icons/Check';
 import { ChevronDown } from '../../lib/icons/ChevronDown';
 import { ChevronRight } from '../../lib/icons/ChevronRight';

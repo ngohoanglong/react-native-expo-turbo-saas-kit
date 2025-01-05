@@ -1,8 +1,10 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm } from 'react-hook-form';
 import { View } from 'react-native';
+
 import { useRequestResetPassword } from '@kit/supabase';
 import { Button, Input, Text } from '@kit/ui';
+
 import { EmailSchema } from '../lib/schema';
 
 export function EmailPasswordResetForm() {
