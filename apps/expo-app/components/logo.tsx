@@ -1,4 +1,4 @@
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import { Path, Svg } from 'react-native-svg';
 
 export function LogoImage({
@@ -11,7 +11,6 @@ export function LogoImage({
   return (
     <View
       style={[
-        StyleSheet.absoluteFill,
         { alignItems: 'center', justifyContent: 'center' },
       ]}
     >

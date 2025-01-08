@@ -4,9 +4,20 @@ import { Controller, useForm } from 'react-hook-form';
 import { View } from 'react-native';
 
 import { useSignInWithEmailPassword } from '@kit/supabase';
-import { Button, Input, Text } from '@kit/ui';
+import {
+  Alert,
+  AlertActions,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
+  Button,
+  Input,
+  Text,
+  X,
+} from '@kit/ui';
 
 import { EmailPasswordSchema } from '../lib/schema';
+import { AuthError } from '../shared/auth-error';
 
 export function SignInEmailPassword() {
   const form = useForm({
@@ -19,11 +30,17 @@ export function SignInEmailPassword() {
 
   const signIn = useSignInWithEmailPassword();
 
-  return (
-    <View className={'flex-col justify-center gap-8 p-8'}>
-      <View className={'h-16'}>
-        <Text>Email</Text>
+  if (signIn.error) {
+    return (
+      <View className={'flex-col justify-center'}>
+        <ErrorMessage error={signIn.error} onReset={() => signIn.reset()} />
+      </View>
+    );
+  }
 
+  return (
+    <View className={'flex-col justify-center gap-4 p-8'}>
+      <View>
         <Controller
           control={form.control}
           name={'email'}
@@ -39,15 +56,14 @@ export function SignInEmailPassword() {
         />
       </View>
 
-      <View className={'h-24'}>
-        <Text>Password</Text>
-
+      <View>
         <Controller
           control={form.control}
           name={'password'}
           render={({ field }) => (
             <Input
               secureTextEntry
+              placeholder={'Password'}
               onBlur={field.onBlur}
               onChangeText={field.onChange}
               value={field.value}
@@ -55,8 +71,8 @@ export function SignInEmailPassword() {
           )}
         />
 
-        <Link className={'my-2.5'} href="/auth/password-reset">
-          <Text className={'text-secondary-foreground'}>
+        <Link className={'my-4'} href="/auth/password-reset">
+          <Text className={'text-muted-foreground text-sm'}>
             Forgot your password?
           </Text>
         </Link>
@@ -64,6 +80,7 @@ export function SignInEmailPassword() {
 
       <View>
         <Button
+          size={'lg'}
           className={'w-full'}
           onPress={form.handleSubmit((data) => {
             signIn.mutate(data);
@@ -73,5 +90,31 @@ export function SignInEmailPassword() {
         </Button>
       </View>
     </View>
+  );
+}
+
+function ErrorMessage(props: { error: unknown; onReset: () => void }) {
+  return (
+    <Alert className={'m-4'}>
+      <AlertIcon>
+        <X
+          className={
+            'h-14 w-14 rounded-full border-8 border-red-100 bg-red-500 p-2 text-white'
+          }
+        />
+      </AlertIcon>
+
+      <AlertTitle>Sorry, we couldn't sign you in.</AlertTitle>
+
+      <AlertDescription>
+        <AuthError error={props.error} />
+      </AlertDescription>
+
+      <AlertActions>
+        <Button className={'mx-4'} variant={'outline'} onPress={props.onReset}>
+          <Text>Try again</Text>
+        </Button>
+      </AlertActions>
+    </Alert>
   );
 }

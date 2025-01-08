@@ -2,7 +2,7 @@ import React from 'react';
 
 import { View } from 'react-native';
 
-import { H1, H4 } from '@kit/ui';
+import {H1, H4, Text} from '@kit/ui';
 
 export function AuthPageLayout(props: React.PropsWithChildren) {
   const childrenArray = React.Children.toArray(props.children);
@@ -33,7 +33,7 @@ export function AuthPageLayout(props: React.PropsWithChildren) {
 
   return (
     <View className={'w-full gap-4'}>
-      <View className={'justify-left top-16 text-left'}>
+      <View className={'top-8'}>
         {childrenByType.logo}
       </View>
 
@@ -64,7 +64,7 @@ export function AuthPageLayoutHeading(props: React.PropsWithChildren) {
 }
 
 export function AuthPageLayoutDescription(props: React.PropsWithChildren) {
-  return props.children;
+  return <Text className={'text-muted-foreground font-normal'}>{props.children}</Text>;
 }
 
 export function AuthPageLayoutSecondaryButton(props: React.PropsWithChildren) {

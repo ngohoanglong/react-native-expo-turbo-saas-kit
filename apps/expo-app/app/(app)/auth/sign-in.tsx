@@ -19,7 +19,7 @@ export default function SignInPage() {
         <LogoImage />
       </AuthPageLayoutLogo>
 
-      <AuthPageLayoutHeading>Welcome Back,</AuthPageLayoutHeading>
+      <AuthPageLayoutHeading>Welcome Back.</AuthPageLayoutHeading>
 
       <AuthPageLayoutDescription>
         Let's get you signed in.

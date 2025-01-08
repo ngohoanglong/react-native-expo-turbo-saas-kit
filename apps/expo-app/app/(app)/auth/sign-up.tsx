@@ -19,10 +19,10 @@ export default function SignUpPage() {
         <LogoImage />
       </AuthPageLayoutLogo>
 
-      <AuthPageLayoutHeading>Welcome,</AuthPageLayoutHeading>
+      <AuthPageLayoutHeading>Let's get started.</AuthPageLayoutHeading>
 
       <AuthPageLayoutDescription>
-        Let's get you started.
+        Sign up to create your account.
       </AuthPageLayoutDescription>
 
       <AuthPageLayoutForm>
