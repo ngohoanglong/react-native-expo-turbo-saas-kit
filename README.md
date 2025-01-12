@@ -13,13 +13,13 @@ It uses Expo and Supabase for authentication and database management.
 1. Clone the repository
 
 ```bash
-git clone https://github.com/makerkit/react-native-expo-supabase-starter-kit.git
+git clone https://github.com/makerkit/expo-turbo-saas-kit.git <your-project-name>
 ```
 
 2. Install dependencies
 
 ```bash
-cd react-native-expo-supabase-starter-kit
+cd <your-project-name>
 pnpm install
 ```
 
