@@ -1,22 +1,33 @@
-import {useQuery} from '@tanstack/react-query';
-import {useSupabase} from '@kit/supabase';
+import { useQuery } from '@tanstack/react-query';
 
-export function useFetchAccount() {
-    const supabase = useSupabase();
-    const queryKey = ['user', 'account'];
+import { useSupabase } from '@kit/supabase';
 
-    const queryFn = async () => {
-        const {data, error} = await supabase.from('accounts').select('*').limit(1).single();
+export function useFetchAccount(userId: string | null | undefined) {
+  const supabase = useSupabase();
+  const queryKey = ['user', 'account'];
 
-        if (error) {
-            throw error;
-        }
+  const queryFn = async () => {
+    if (!userId) {
+      return null;
+    }
 
-        return data;
-    };
+    const { data, error } = await supabase
+      .from('accounts')
+      .select('*')
+      .eq('id', userId)
+      .limit(1)
+      .single();
 
-    return useQuery({
-        queryKey,
-        queryFn,
-    });
+    if (error) {
+      throw error;
+    }
+
+    return data;
+  };
+
+  return useQuery({
+    queryKey,
+    queryFn,
+    enabled: !!userId,
+  });
 }

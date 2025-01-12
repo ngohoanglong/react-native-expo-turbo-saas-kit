@@ -33,7 +33,7 @@ export function AuthPageLayout(props: React.PropsWithChildren) {
 
   return (
     <View className={'w-full gap-4'}>
-      <View className={'top-8'}>
+      <View className={'top-12'}>
         {childrenByType.logo}
       </View>
 

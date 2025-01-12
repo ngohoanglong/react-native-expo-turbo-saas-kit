@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import { zodResolver } from '@hookform/resolvers/zod';
 import { CheckIcon, X } from 'lucide-react-native';
 import { Controller, useForm } from 'react-hook-form';
@@ -33,40 +31,20 @@ export function SignUpEmailPassword() {
 
   console.log('deepLink', deepLink);
 
-  const [state, setState] = useState({
-    loading: false,
-    error: true,
-    success: false,
-  });
-
-  if (state.success) {
+  if (signUpMutation.isSuccess) {
     return <SuccessMessage />;
   }
 
-  if (state.error) {
+  if (signUpMutation.isError) {
     return <ErrorMessage />;
   }
 
   const onSubmit = form.handleSubmit(async (data) => {
-    try {
-      await signUpMutation.mutateAsync({
-        email: data.email,
-        password: data.password,
-        emailRedirectTo: deepLink,
-      });
-
-      setState({
-        loading: false,
-        error: false,
-        success: true,
-      });
-    } catch (error) {
-      setState({
-        loading: false,
-        error: true,
-        success: false,
-      });
-    }
+    await signUpMutation.mutateAsync({
+      email: data.email,
+      password: data.password,
+      emailRedirectTo: deepLink,
+    });
   });
 
   return (
@@ -104,7 +82,11 @@ export function SignUpEmailPassword() {
       </View>
 
       <View>
-        <Button size={'lg'} disabled={state.loading} onPress={onSubmit}>
+        <Button
+          size={'lg'}
+          disabled={signUpMutation.isPending}
+          onPress={onSubmit}
+        >
           <Text>Create Account</Text>
         </Button>
       </View>

@@ -1,6 +1,8 @@
 import { Stack } from 'expo-router';
 import { View } from 'react-native';
 
+import { UpdateProfileContainer } from '@kit/account';
+
 export default function ProfileSettingsPage() {
   return (
     <View>
@@ -12,6 +14,8 @@ export default function ProfileSettingsPage() {
           headerBackButtonMenuEnabled: true,
         }}
       />
+
+      <UpdateProfileContainer />
     </View>
   );
 }
