@@ -1,4 +1,4 @@
-# React Native Starter Kit
+# Expo + Supabase - React Native Starter Kit by MakerKit.dev
 
 This is a starter kit for React Native applications, mostly useful as a companion Starter Kit for [MakerKit](https://makerkit.dev), but can be used as a standalone starter kit.
 
