@@ -1,6 +1,10 @@
 # React Native Starter Kit
 
-This is a starter kit for React Native applications. It uses Expo and Supabase for authentication and database management.
+This is a starter kit for React Native applications, mostly useful as a companion Starter Kit for [MakerKit](https://makerkit.dev), but can be used as a standalone starter kit.
+
+It uses Expo and Supabase for authentication and database management.
+
+**THIS IS A WORK IN PROGRESS. DO NOT USE YET.**
 
 ## Getting Started
 
