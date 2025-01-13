@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ThemeProvider } from '@react-navigation/native';
@@ -20,8 +20,11 @@ export function GlobalThemeProvider({
       const theme = await AsyncStorage.getItem('theme');
 
       if (Platform.OS === 'web') {
-        // Adds the background color to the html element to prevent white background on overscroll.
-        document.documentElement.classList.add('bg-background');
+        if (typeof document !== 'undefined') {
+          // Adds the background color to the html element to prevent white background on overscroll.
+          /* eslint-disable-next-line no-undef */
+          document.documentElement.classList.add('bg-background');
+        }
       }
 
       if (!theme) {

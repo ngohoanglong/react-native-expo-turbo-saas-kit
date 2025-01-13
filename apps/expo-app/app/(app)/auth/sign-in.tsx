@@ -1,4 +1,3 @@
-import { LogoImage } from '@/components/logo';
 import { Link } from 'expo-router';
 
 import {
@@ -11,6 +10,8 @@ import {
   SignInForm,
 } from '@kit/auth';
 import { Button, Text } from '@kit/ui';
+
+import { LogoImage } from '../../../components/logo';
 
 export default function SignInPage() {
   return (

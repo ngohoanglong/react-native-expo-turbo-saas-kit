@@ -55,7 +55,7 @@ const DropdownMenuSubTrigger = React.forwardRef<
         )}
         {...props}
       >
-        <>{children}</>
+        <>{children as React.ReactNode}</>
         <Icon size={18} className="text-foreground ml-auto" />
       </DropdownMenuPrimitive.SubTrigger>
     </TextClassContext.Provider>
@@ -99,15 +99,18 @@ const DropdownMenuContent = React.forwardRef<
     ref,
   ) => {
     const { open } = DropdownMenuPrimitive.useRootContext();
+
+    const style = StyleSheet.flatten([
+      Platform.OS !== 'web' ? StyleSheet.absoluteFill : undefined,
+      overlayStyle,
+    ]);
+
     return (
       <DropdownMenuPrimitive.Portal hostName={portalHost}>
         <DropdownMenuPrimitive.Overlay
           style={
             overlayStyle
-              ? StyleSheet.flatten([
-                  Platform.OS !== 'web' ? StyleSheet.absoluteFill : undefined,
-                  overlayStyle,
-                ] as ViewStyle)
+              ? style
               : Platform.OS !== 'web'
                 ? StyleSheet.absoluteFill
                 : undefined
@@ -172,7 +175,7 @@ const DropdownMenuCheckboxItem = React.forwardRef<
         <Check size={14} strokeWidth={3} className="text-foreground" />
       </DropdownMenuPrimitive.ItemIndicator>
     </View>
-    <>{children}</>
+    <>{children as React.ReactNode}</>
   </DropdownMenuPrimitive.CheckboxItem>
 ));
 DropdownMenuCheckboxItem.displayName =
@@ -196,7 +199,7 @@ const DropdownMenuRadioItem = React.forwardRef<
         <View className="bg-foreground h-2 w-2 rounded-full" />
       </DropdownMenuPrimitive.ItemIndicator>
     </View>
-    <>{children}</>
+    <>{children as React.ReactNode}</>
   </DropdownMenuPrimitive.RadioItem>
 ));
 DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName;

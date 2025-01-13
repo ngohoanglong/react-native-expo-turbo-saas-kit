@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { nanoid } from 'nanoid';
 import { SupabaseClient } from '@supabase/supabase-js';
 
 import { getDocumentAsync } from 'expo-document-picker';
@@ -208,8 +208,6 @@ async function getAvatarFileName(
   userId: string,
   extension: string | undefined,
 ) {
-  const { nanoid } = await import('nanoid');
-
   // we add a version to the URL to ensure
   // the browser always fetches the latest image
   const uniqueId = nanoid(16);

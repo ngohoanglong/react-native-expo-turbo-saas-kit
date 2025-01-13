@@ -1,4 +1,1 @@
-// https://docs.expo.dev/guides/using-eslint/
-module.exports = {
-  extends: 'expo',
-};
+module.exports = require('@kit/eslint-config');

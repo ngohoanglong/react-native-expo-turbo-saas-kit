@@ -1,5 +1,3 @@
-import { Text } from '@kit/ui';
-
 const errorsMap = {
   'Invalid login credentials': 'The credentials entered are invalid',
   'User already registered':
@@ -28,7 +26,7 @@ export function AuthError({
 }: {
   error: unknown;
 }) {
-  return <>{getErrorMessage(error)}</>
+  return getErrorMessage(error);
 }
 
 function getErrorMessage(error: unknown) {

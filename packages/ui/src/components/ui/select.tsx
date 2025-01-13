@@ -30,7 +30,7 @@ const SelectTrigger = React.forwardRef<
     )}
     {...props}
   >
-    <>{children}</>
+    <>{children as React.ReactNode}</>
     <ChevronDown
       size={16}
       aria-hidden={true}

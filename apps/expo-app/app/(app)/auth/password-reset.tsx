@@ -1,4 +1,3 @@
-import { LogoImage } from '@/components/logo';
 import { Link } from 'expo-router';
 
 import {
@@ -12,32 +11,32 @@ import {
 } from '@kit/auth';
 import { Button, Text } from '@kit/ui';
 
+import { LogoImage } from '../../../components/logo';
+
 export default function PasswordResetPage() {
   return (
-    <>
-      <AuthPageLayout>
-        <AuthPageLayoutLogo>
-          <LogoImage />
-        </AuthPageLayoutLogo>
+    <AuthPageLayout>
+      <AuthPageLayoutLogo>
+        <LogoImage />
+      </AuthPageLayoutLogo>
 
-        <AuthPageLayoutHeading>Hi,</AuthPageLayoutHeading>
+      <AuthPageLayoutHeading>Hi,</AuthPageLayoutHeading>
 
-        <AuthPageLayoutDescription>
-          Let's recover your password.
-        </AuthPageLayoutDescription>
+      <AuthPageLayoutDescription>
+        Let's recover your password.
+      </AuthPageLayoutDescription>
 
-        <AuthPageLayoutForm>
-          <EmailPasswordResetForm />
-        </AuthPageLayoutForm>
+      <AuthPageLayoutForm>
+        <EmailPasswordResetForm />
+      </AuthPageLayoutForm>
 
-        <AuthPageLayoutSecondaryButton>
-          <Button variant={'link'} asChild>
-            <Link className={'text-center'} href="/auth/sign-in">
-              <Text>Password Recovered? Sign In.</Text>
-            </Link>
-          </Button>
-        </AuthPageLayoutSecondaryButton>
-      </AuthPageLayout>
-    </>
+      <AuthPageLayoutSecondaryButton>
+        <Button variant={'link'} asChild>
+          <Link className={'text-center'} href="/auth/sign-in">
+            <Text>Password Recovered? Sign In.</Text>
+          </Link>
+        </Button>
+      </AuthPageLayoutSecondaryButton>
+    </AuthPageLayout>
   );
 }

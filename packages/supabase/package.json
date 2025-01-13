@@ -14,21 +14,21 @@
     "@kit/prettier-config": "workspace:*",
     "@kit/tailwind-config": "workspace:*",
     "@kit/typescript-config": "workspace:*",
-    "@types/aes-js": "^3.1.4",
-    "zod": "^3.24.1"
+    "@types/aes-js": "catalog:",
+    "zod": "catalog:"
   },
   "dependencies": {
-    "@react-native-async-storage/async-storage": "^2.1.0",
-    "@supabase/supabase-js": "^2.47.12",
-    "@tanstack/react-query": "^5.62.16",
-    "aes-js": "^3.1.2",
-    "expo-secure-store": "^14.0.0",
-    "react-native-get-random-values": "^1.11.0"
+    "@react-native-async-storage/async-storage": "catalog:",
+    "@supabase/supabase-js": "catalog:",
+    "@tanstack/react-query": "catalog:",
+    "aes-js": "catalog:",
+    "expo-secure-store": "catalog:",
+    "react-native-get-random-values": "catalog:"
   },
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@kit/eslint-config/react-internal.js"
+      "@kit/eslint-config"
     ]
   },
   "prettier": "@kit/prettier-config"

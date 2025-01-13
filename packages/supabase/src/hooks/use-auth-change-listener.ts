@@ -37,5 +37,5 @@ export function useAuthChangeListener({
 
     // destroy listener on un-mounts
     return () => listener.data.subscription.unsubscribe();
-  }, [client.auth, appHomePath, onEvent]);
+  }, [client.auth, appHomePath, onEvent, queryClient]);
 }

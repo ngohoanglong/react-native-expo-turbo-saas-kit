@@ -1,8 +1,9 @@
-import { RootProvider } from '@/components/root-provider';
 import { Slot } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-reanimated';
 
+// root provider
+import { RootProvider } from '../components/root-provider';
 // Import global styles
 import './global.css';
 

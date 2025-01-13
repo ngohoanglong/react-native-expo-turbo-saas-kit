@@ -10,28 +10,28 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@hookform/resolvers": "^3.9.1",
+    "@hookform/resolvers": "catalog:",
     "@kit/eslint-config": "workspace:*",
     "@kit/prettier-config": "workspace:*",
     "@kit/supabase": "workspace:*",
     "@kit/tailwind-config": "workspace:*",
     "@kit/typescript-config": "workspace:*",
     "@kit/ui": "workspace:*",
-    "@supabase/supabase-js": "^2.47.12",
-    "@tanstack/react-query": "^5.62.16",
-    "@types/react": "^18.3.11",
-    "expo-auth-session": "^5.5.2",
-    "react": "18.3.1",
-    "react-hook-form": "^7.54.2",
-    "zod": "^3.24.1"
+    "@supabase/supabase-js": "catalog:",
+    "@tanstack/react-query": "catalog:",
+    "@types/react": "catalog:",
+    "expo-auth-session": "catalog:",
+    "react": "catalog:",
+    "react-hook-form": "catalog:",
+    "zod": "catalog:"
   },
   "dependencies": {
-    "expo-document-picker": "^13.0.1"
+    "expo-document-picker": "catalog:"
   },
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@kit/eslint-config/react-internal.js"
+      "@kit/eslint-config"
     ]
   },
   "prettier": "@kit/prettier-config"
