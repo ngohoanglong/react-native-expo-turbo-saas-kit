@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react';
+import React, { useMemo } from 'react';
 
 import { View, ViewProps } from 'react-native';
 
@@ -15,12 +15,23 @@ type AlertIconProps = React.ComponentProps<typeof View>;
 type AlertActionsProps = React.ComponentProps<typeof View>;
 
 export function Alert({ children, className, ...props }: AlertProps) {
-  const components = useMemo(() => React.Children.toArray(children), [children]);
+  const components = useMemo(
+    () => React.Children.toArray(children),
+    [children],
+  );
 
-  const Title = components.find((child) => React.isValidElement(child) && child.type === AlertTitle);
-  const Description = components.find((child) => React.isValidElement(child) && child.type === AlertDescription);
-  const Actions = components.find((child) => React.isValidElement(child) && child.type === AlertActions);
-  const Icon = components.find((child) => React.isValidElement(child) && child.type === AlertIcon);
+  const Title = components.find(
+    (child) => React.isValidElement(child) && child.type === AlertTitle,
+  );
+  const Description = components.find(
+    (child) => React.isValidElement(child) && child.type === AlertDescription,
+  );
+  const Actions = components.find(
+    (child) => React.isValidElement(child) && child.type === AlertActions,
+  );
+  const Icon = components.find(
+    (child) => React.isValidElement(child) && child.type === AlertIcon,
+  );
 
   return (
     <View
@@ -30,9 +41,7 @@ export function Alert({ children, className, ...props }: AlertProps) {
       )}
       {...props}
     >
-      <View>
-        {Icon}
-      </View>
+      <View>{Icon}</View>
 
       <View className={'flex-col items-center gap-1'}>
         {Title}
@@ -67,7 +76,11 @@ export function AlertDescription({
   );
 }
 
-export function AlertActions({ children, className, ...props }: AlertActionsProps) {
+export function AlertActions({
+  children,
+  className,
+  ...props
+}: AlertActionsProps) {
   return (
     <View className={cn('flex-row gap-4', className)} {...props}>
       {children}

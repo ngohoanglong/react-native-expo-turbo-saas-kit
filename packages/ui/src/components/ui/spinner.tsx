@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Path, Svg } from 'react-native-svg';
 
 import { cn } from '../../lib/utils';

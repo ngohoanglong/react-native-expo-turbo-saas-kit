@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { GlobalThemeProvider } from './theme-provider';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+import { GlobalThemeProvider } from './theme-provider';
 
 const queryClient = new QueryClient({
   defaultOptions: {

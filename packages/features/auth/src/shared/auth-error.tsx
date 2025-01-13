@@ -21,11 +21,7 @@ const errorsMap = {
     'Please sign-in with your current multi-factor authentication to perform this action',
 } as const;
 
-export function AuthError({
-  error,
-}: {
-  error: unknown;
-}) {
+export function AuthError({ error }: { error: unknown }) {
   return getErrorMessage(error);
 }
 
