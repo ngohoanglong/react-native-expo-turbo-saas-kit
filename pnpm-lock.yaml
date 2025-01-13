@@ -277,7 +277,7 @@ overrides:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
       '@manypkg/cli':
         specifier: 'catalog:'
         version: 0.23.0
