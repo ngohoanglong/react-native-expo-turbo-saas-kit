@@ -24,14 +24,6 @@
     "supabase:web:reset": "pnpm --filter app supabase:reset",
     "stripe:listen": "pnpm --filter '@kit/stripe' start"
   },
-  "pnpm": {
-    "overrides": {
-      "react": "18.3.1",
-      "react-dom": "18.3.1",
-      "react-is": "18.3.1",
-      "eslint": "8.57.0"
-    }
-  },
   "devDependencies": {
     "@manypkg/cli": "catalog:",
     "@turbo/gen": "catalog:",

@@ -53,6 +53,8 @@
     "nativewind": "catalog:",
     "react": "catalog:",
     "react-native-svg": "catalog:",
+    "sonner": "catalog:",
+    "sonner-native": "catalog:",
     "tailwind-merge": "catalog:"
   },
   "eslintConfig": {
