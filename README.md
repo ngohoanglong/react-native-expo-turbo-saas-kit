@@ -1,4 +1,4 @@
-![Expo + Supabase - React Native Starter Kit by MakerKit.dev](apps/web/public/images/makerkit.webp)
+![Expo + Supabase - React Native Starter Kit by MakerKit.dev](apps/expo-app/assets/images/makerkit.webp)
 
 # NEW! Expo + Supabase - React Native Starter Kit by MakerKit.dev
 
