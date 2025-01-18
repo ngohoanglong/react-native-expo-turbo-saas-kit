@@ -6,6 +6,8 @@ This is a starter kit for React Native applications, mostly useful as a companio
 
 It uses Expo and Supabase for authentication and database management.
 
+NB: this is an early preview. It likely contains bugs, and the documentation is still incomplete.
+
 ## What's Included
 
 ### Core Architecture
