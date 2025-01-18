@@ -1,6 +1,8 @@
 import { Stack } from 'expo-router';
 import { View } from 'react-native';
 
+import { UpdateAccountContainer } from '@kit/account';
+
 export default function AccountSettingsPage() {
   return (
     <View>
@@ -13,6 +15,8 @@ export default function AccountSettingsPage() {
           headerShown: true,
         }}
       />
+
+      <UpdateAccountContainer />
     </View>
   );
 }
