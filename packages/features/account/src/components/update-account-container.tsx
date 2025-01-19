@@ -13,7 +13,7 @@ import { UpdatePasswordForm } from './update-password-form';
 
 export function UpdateAccountContainer() {
   return (
-    <View className={'flex-col justify-center'}>
+    <View className={'flex-col justify-center gap-4'}>
       <UpdateEmailFormContainer />
       <UpdatePasswordFormContainer />
     </View>
@@ -22,42 +22,38 @@ export function UpdateAccountContainer() {
 
 function UpdateEmailFormContainer() {
   return (
-    <View className={'flex-col justify-center gap-4 p-4'}>
-      <Card>
-        <CardHeader>
-          <CardTitle className={'text-base'}>Update your email</CardTitle>
+    <Card>
+      <CardHeader>
+        <CardTitle>Update your email</CardTitle>
 
-          <CardDescription>
-            Update your email. After updating your email, please verify it by
-            clicking the link in the email we sent you.
-          </CardDescription>
-        </CardHeader>
+        <CardDescription>
+          Update your email. After updating your email, please verify it by
+          clicking the link in the email we sent you.
+        </CardDescription>
+      </CardHeader>
 
-        <CardContent className={'flex-col justify-center gap-4'}>
-          <UpdateEmailForm />
-        </CardContent>
-      </Card>
-    </View>
+      <CardContent>
+        <UpdateEmailForm />
+      </CardContent>
+    </Card>
   );
 }
 
 function UpdatePasswordFormContainer() {
   return (
-    <View className={'flex-col justify-center gap-4 p-4'}>
-      <Card>
-        <CardHeader>
-          <CardTitle className={'text-base'}>Update your password</CardTitle>
+    <Card>
+      <CardHeader>
+        <CardTitle>Update your password</CardTitle>
 
-          <CardDescription>
-            Update your password. After updating your password, please verify it
-            by clicking the link in the email we sent you.
-          </CardDescription>
-        </CardHeader>
+        <CardDescription>
+          Update your password. After updating your password, please verify it
+          by clicking the link in the email we sent you.
+        </CardDescription>
+      </CardHeader>
 
-        <CardContent className={'flex-col justify-center gap-4'}>
-          <UpdatePasswordForm />
-        </CardContent>
-      </Card>
-    </View>
+      <CardContent>
+        <UpdatePasswordForm />
+      </CardContent>
+    </Card>
   );
 }

@@ -23,7 +23,7 @@ export function UpdateEmailForm() {
   });
 
   return (
-    <View className="flex flex-col space-y-4">
+    <View className="flex flex-col gap-4">
       <Controller
         control={form.control}
         name="email"

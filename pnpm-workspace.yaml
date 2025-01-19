@@ -47,6 +47,7 @@ catalog:
   "@typescript-eslint/parser": ^8.19.1
   "@vercel/style-guide": ^5.2.0
   aes-js: ^3.1.2
+  babel-plugin-module-resolver: 5.0.2
   class-variance-authority: ^0.7.0
   clsx: ^2.1.1
   cross-env: ^7.0.3
@@ -58,6 +59,7 @@ catalog:
   expo: ~52.0.23
   expo-auth-session: ^5.5.2
   expo-constants: ~17.0.3
+  expo-dev-client: 5.0.9
   expo-document-picker: ^13.0.1
   expo-font: ~13.0.2
   expo-linking: ~7.0.3

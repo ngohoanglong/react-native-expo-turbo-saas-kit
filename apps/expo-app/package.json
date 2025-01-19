@@ -40,6 +40,7 @@
     "@tanstack/react-query": "catalog:",
     "expo": "catalog:",
     "expo-constants": "catalog:",
+    "expo-dev-client": "catalog:",
     "expo-font": "catalog:",
     "expo-linking": "catalog:",
     "expo-router": "catalog:",
@@ -56,6 +57,7 @@
     "react-native-reanimated": "catalog:",
     "react-native-safe-area-context": "catalog:",
     "react-native-screens": "catalog:",
+    "react-native-svg": "catalog:",
     "react-native-web": "catalog:"
   },
   "devDependencies": {
@@ -67,6 +69,7 @@
     "@types/jest": "catalog:",
     "@types/react": "catalog:",
     "@types/react-test-renderer": "catalog:",
+    "babel-plugin-module-resolver": "catalog:",
     "eslint-config-expo": "catalog:",
     "jest": "catalog:",
     "jest-expo": "catalog:",

@@ -1,20 +1,20 @@
 import type { PropsWithChildren } from 'react';
 
-import { View } from 'react-native';
+import { ActivityIndicator, View } from 'react-native';
 
 import { cn } from '../../lib/utils';
-import { Spinner } from './spinner';
 
 export function LoadingOverlay({
   children,
   className,
+  size = 'small',
   fullPage = true,
-  spinnerClassName,
 }: PropsWithChildren<{
   className?: string;
   spinnerClassName?: string;
   fullPage?: boolean;
   displayLogo?: boolean;
+  size?: 'small' | 'large';
 }>) {
   return (
     <View
@@ -27,7 +27,7 @@ export function LoadingOverlay({
         },
       )}
     >
-      <Spinner className={spinnerClassName} />
+      <ActivityIndicator size={size} />
 
       <View className={'text-muted-foreground text-sm'}>{children}</View>
     </View>

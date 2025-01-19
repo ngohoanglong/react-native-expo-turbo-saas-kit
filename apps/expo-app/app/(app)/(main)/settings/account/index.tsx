@@ -5,7 +5,7 @@ import { UpdateAccountContainer } from '@kit/account';
 
 export default function AccountSettingsPage() {
   return (
-    <View>
+    <View className="flex-1 p-4">
       <Stack.Screen
         options={{
           title: 'Account',

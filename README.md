@@ -2,21 +2,27 @@
 
 # NEW! Expo + Supabase - React Native Starter Kit by MakerKit.dev
 
-This is a starter kit for React Native applications, mostly useful as a companion Starter Kit for [MakerKit](https://makerkit.dev), but can be used as a standalone starter kit.
+This is a starter kit for React Native applications, mostly useful as a
+companion Starter Kit for [MakerKit](https://makerkit.dev), but can be used as a
+standalone starter kit.
 
 It uses Expo and Supabase for authentication and database management.
 
-NB: this is an early preview. It likely contains bugs, and the documentation is still incomplete.
+NB: this is an early preview. It likely contains bugs, and the documentation is
+still incomplete.
 
 ## What's Included
 
 ### Core Architecture
+
 - 🏗️ Expo + React Native
-- 🎨 NativeWind + Tailwind CSS + [React Native Reusable Components](https://rnr-docs.vercel.app/getting-started/introduction/)
+- 🎨 NativeWind + Tailwind CSS +
+  [React Native Reusable Components](https://rnr-docs.vercel.app/getting-started/introduction/)
 - 🔐 Supabase authentication & basic DB
 - ✨ Full TypeScript + ESLint + Prettier configuration
 
 ### Key Features
+
 - 👤 User authentication flow
 - ⚙️ User profile & settings
 - 🔒 Protected routes
@@ -30,10 +36,16 @@ This starter kit provides core foundations:
 - [Supabase](https://supabase.com/) - Authentication and database management
 - [NativeWind](https://nativewind.dev/) - Tailwind CSS for React Native
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [React Native Reusable Components](https://rnr-docs.vercel.app/getting-started/introduction/) - Reusable React Native components
+- [React Native Reusable Components](https://rnr-docs.vercel.app/getting-started/introduction/) -
+  Reusable React Native components
 - [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript
 - [ESLint](https://eslint.org/) - Linting and code formatting
 - [Prettier](https://prettier.io/) - Code formatting
+
+## Preview
+
+![Sign In](apps/expo-app/assets/images/sign-in.png)
+![Sign Up](apps/expo-app/assets/images/sign-up.png)
 
 ## Requirements
 
@@ -88,12 +100,16 @@ The documentation is not yet available. Please check back later.
 
 ## Contributing
 
-Contributions for bug fixed are welcome! However, please open an issue first to discuss your ideas before making a pull request.
+Contributions for bug fixed are welcome! However, please open an issue first to
+discuss your ideas before making a pull request.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file
+for more details.
 
 ## Support
 
-No support is provided for this kit. Feel free to open an issue if you have any questions or need help, but there is no guaranteed response time, nor guarantee a fix.
+No support is provided for this kit. Feel free to open an issue if you have any
+questions or need help, but there is no guaranteed response time, nor guarantee
+a fix.

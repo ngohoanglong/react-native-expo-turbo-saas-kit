@@ -36,7 +36,7 @@ export function UpdateProfileContainer() {
   }
 
   return (
-    <View className={'flex-col justify-center'}>
+    <View className={'flex-col justify-center gap-4'}>
       <UpdateProfilePictureContainer data={accountData} />
       <UpdateProfileForm data={accountData} />
     </View>
@@ -48,44 +48,37 @@ function UpdateProfilePictureContainer(props: { data: Tables<'accounts'> }) {
   const pictureUrl = props.data.picture_url;
 
   return (
-    <View className={'flex-col justify-center gap-4 p-4'}>
-      <Card>
-        <CardHeader>
-          <CardTitle className={'text-base'}>
-            Update your profile picture
-          </CardTitle>
+    <Card>
+      <CardHeader>
+        <CardTitle>Update your profile picture</CardTitle>
 
-          <CardDescription>
-            Update your profile picture to make it easier for others to find
-            you.
-          </CardDescription>
-        </CardHeader>
+        <CardDescription>
+          Update your profile picture to make it easier for others to find you.
+        </CardDescription>
+      </CardHeader>
 
-        <CardContent className={'flex-col justify-center gap-4'}>
-          <UpdateProfilePictureForm pictureUrl={pictureUrl} userId={userId} />
-        </CardContent>
-      </Card>
-    </View>
+      <CardContent>
+        <UpdateProfilePictureForm pictureUrl={pictureUrl} userId={userId} />
+      </CardContent>
+    </Card>
   );
 }
 
 function UpdateProfileForm(props: { data: Tables<'accounts'> }) {
   return (
-    <View className={'flex-col justify-center gap-4 p-4'}>
-      <Card>
-        <CardHeader>
-          <CardTitle className={'text-base'}>Update your name</CardTitle>
+    <Card>
+      <CardHeader>
+        <CardTitle>Update your name</CardTitle>
 
-          <CardDescription>
-            Update your name to make it easier for others to find you.
-          </CardDescription>
-        </CardHeader>
+        <CardDescription>
+          Update your name to make it easier for others to find you.
+        </CardDescription>
+      </CardHeader>
 
-        <CardContent className={'flex-col justify-center gap-4'}>
-          <UpdateProfileNameForm data={props.data} />
-        </CardContent>
-      </Card>
-    </View>
+      <CardContent className={'flex-col justify-center gap-4'}>
+        <UpdateProfileNameForm data={props.data} />
+      </CardContent>
+    </Card>
   );
 }
 

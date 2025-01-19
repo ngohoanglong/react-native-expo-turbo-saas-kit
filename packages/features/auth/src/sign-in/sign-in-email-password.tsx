@@ -82,6 +82,7 @@ export function SignInEmailPassword() {
         <Button
           size={'lg'}
           className={'w-full'}
+          disabled={signIn.isPending}
           onPress={form.handleSubmit((data) => {
             signIn.mutate(data);
           })}
@@ -96,12 +97,8 @@ export function SignInEmailPassword() {
 function ErrorMessage(props: { error: unknown; onReset: () => void }) {
   return (
     <Alert className={'m-4'}>
-      <AlertIcon>
-        <X
-          className={
-            'h-14 w-14 rounded-full border-8 border-red-100 bg-red-500 p-2 text-white'
-          }
-        />
+      <AlertIcon className="rounded-full border-8 border-red-100 bg-red-500 p-2">
+        <X className={'h-14 w-14 text-white'} />
       </AlertIcon>
 
       <AlertTitle>Sorry, we couldn't sign you in.</AlertTitle>

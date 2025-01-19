@@ -1,5 +1,4 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { CheckIcon, X } from 'lucide-react-native';
 import { Controller, useForm } from 'react-hook-form';
 import { View } from 'react-native';
 
@@ -10,8 +9,10 @@ import {
   AlertIcon,
   AlertTitle,
   Button,
+  Check,
   Input,
   Text,
+  toast,
 } from '@kit/ui';
 
 import { useCreateDeepLink } from '../lib/deep-links';
@@ -26,17 +27,16 @@ export function SignUpEmailPassword() {
     },
   });
 
-  const signUpMutation = useSignUpWithEmailAndPassword();
-  const deepLink = useCreateDeepLink();
+  const signUpMutation = useSignUpWithEmailAndPassword({
+    onError: () => {
+      toast.error('Something went wrong. Please try again.');
+    },
+  });
 
-  console.log('deepLink', deepLink);
+  const deepLink = useCreateDeepLink();
 
   if (signUpMutation.isSuccess) {
     return <SuccessMessage />;
-  }
-
-  if (signUpMutation.isError) {
-    return <ErrorMessage />;
   }
 
   const onSubmit = form.handleSubmit(async (data) => {
@@ -96,38 +96,20 @@ export function SignUpEmailPassword() {
 
 function SuccessMessage() {
   return (
-    <Alert className={'m-4'}>
-      <AlertIcon>
-        <CheckIcon
-          className={
-            'h-14 w-14 rounded-full border-8 border-green-100 bg-green-500 p-2 text-white'
-          }
-        />
-      </AlertIcon>
+    <View>
+      <Alert className={'m-4'}>
+        <AlertIcon
+          className={'rounded-full border-8 border-green-100 bg-green-500 p-2'}
+        >
+          <Check className={'h-14 w-14 text-white'} />
+        </AlertIcon>
 
-      <AlertTitle> We have sent you an email.!</AlertTitle>
+        <AlertTitle>We have sent you an email.</AlertTitle>
 
-      <AlertDescription>
-        Please verify your email address to complete your registration.
-      </AlertDescription>
-    </Alert>
-  );
-}
-
-function ErrorMessage() {
-  return (
-    <Alert className={'m-4'}>
-      <AlertIcon>
-        <X
-          className={
-            'h-14 w-14 rounded-full border-8 border-red-100 bg-red-500 p-2 text-white'
-          }
-        />
-      </AlertIcon>
-
-      <AlertTitle>Sorry, Something went wrong.</AlertTitle>
-
-      <AlertDescription>Please try again later.</AlertDescription>
-    </Alert>
+        <AlertDescription>
+          Please verify your email address to complete your registration.
+        </AlertDescription>
+      </Alert>
+    </View>
   );
 }

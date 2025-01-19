@@ -33,7 +33,7 @@ export function AuthPageLayout(props: React.PropsWithChildren) {
 
   return (
     <View className={'w-full gap-4'}>
-      <View className={'top-12'}>{childrenByType.logo}</View>
+      <View className={'top-20'}>{childrenByType.logo}</View>
 
       <View className={'top-28 px-8'}>
         <H1>{childrenByType.formHeading}</H1>

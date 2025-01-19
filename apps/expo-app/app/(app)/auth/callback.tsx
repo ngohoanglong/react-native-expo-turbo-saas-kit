@@ -2,15 +2,13 @@ import { useEffect } from 'react';
 
 import * as Linking from 'expo-linking';
 import { router } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
 
 import { useCreateSessionFromUrl } from '@kit/auth';
+import { LoadingOverlay } from '@kit/ui';
 
 export default function CallbackPage() {
   const createSessionFromUrl = useCreateSessionFromUrl();
   const url = Linking.useURL();
-
-  void SplashScreen.preventAutoHideAsync();
 
   useEffect(() => {
     (async () => {
@@ -18,17 +16,19 @@ export default function CallbackPage() {
         return;
       }
 
-      const session = await createSessionFromUrl(url);
+      try {
+        const session = await createSessionFromUrl(url);
 
-      if (session) {
-        return router.replace('/');
+        if (session) {
+          return router.replace('/');
+        }
+      } catch (error) {
+        console.error(error);
+
+        router.push('/auth/error');
       }
     })();
-
-    return () => {
-      void SplashScreen.hideAsync();
-    };
   }, [createSessionFromUrl, url]);
 
-  return null;
+  return <LoadingOverlay size="large">Signing you in...</LoadingOverlay>;
 }

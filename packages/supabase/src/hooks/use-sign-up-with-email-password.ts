@@ -9,7 +9,7 @@ interface Credentials {
   captchaToken?: string;
 }
 
-export function useSignUpWithEmailAndPassword() {
+export function useSignUpWithEmailAndPassword(props: { onError?: () => void }) {
   const client = useSupabase();
   const mutationKey = ['auth', 'sign-up-with-email-password'];
 
@@ -42,5 +42,6 @@ export function useSignUpWithEmailAndPassword() {
   return useMutation({
     mutationKey,
     mutationFn,
+    onError: props.onError,
   });
 }

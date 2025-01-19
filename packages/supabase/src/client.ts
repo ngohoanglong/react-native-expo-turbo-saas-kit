@@ -1,9 +1,13 @@
 import { createClient } from '@supabase/supabase-js';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform } from 'react-native';
 import { z } from 'zod';
 
 import { Database } from './database.types';
+import { LargeSecureStore } from './large-secure-store';
+
+const storage = Platform.OS === 'web' ? AsyncStorage : new LargeSecureStore();
 
 const { supabaseUrl, supabaseAnonKey } = z
   .object({
@@ -18,7 +22,7 @@ const { supabaseUrl, supabaseAnonKey } = z
 export const getSupabaseBrowserClient = <GenericSchema = Database>() =>
   createClient<GenericSchema>(supabaseUrl, supabaseAnonKey, {
     auth: {
-      storage: AsyncStorage,
+      storage,
       autoRefreshToken: true,
       persistSession: typeof document !== 'undefined',
       detectSessionInUrl: false,

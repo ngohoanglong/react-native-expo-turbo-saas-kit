@@ -6,13 +6,13 @@ import { useSupabase } from './use-supabase';
 
 export function useSignInWithEmailPassword() {
   const client = useSupabase();
-  const mutationKey = ['auth', 'sign-in-with-email-password'];
   const queryClient = useQueryClient();
 
   const mutationFn = async (credentials: SignInWithPasswordCredentials) => {
     const response = await client.auth.signInWithPassword(credentials);
 
     if (response.error) {
+      console.error(response.error);
       throw response.error.message;
     }
 
@@ -28,7 +28,6 @@ export function useSignInWithEmailPassword() {
   };
 
   return useMutation({
-    mutationKey,
     mutationFn,
     onSuccess: () => {
       return queryClient.refetchQueries({

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { Toaster } from '@kit/ui';
 
@@ -16,9 +17,14 @@ const queryClient = new QueryClient({
 
 export function RootProvider({ children }: { children: React.ReactNode }) {
   return (
-    <QueryClientProvider client={queryClient}>
-      <GlobalThemeProvider>{children}</GlobalThemeProvider>
-      <Toaster />
-    </QueryClientProvider>
+    <GestureHandlerRootView>
+      <QueryClientProvider client={queryClient}>
+        <GlobalThemeProvider>
+          {children}
+
+          <Toaster />
+        </GlobalThemeProvider>
+      </QueryClientProvider>
+    </GestureHandlerRootView>
   );
 }

@@ -23,12 +23,15 @@ export function Alert({ children, className, ...props }: AlertProps) {
   const Title = components.find(
     (child) => React.isValidElement(child) && child.type === AlertTitle,
   );
+
   const Description = components.find(
     (child) => React.isValidElement(child) && child.type === AlertDescription,
   );
+
   const Actions = components.find(
     (child) => React.isValidElement(child) && child.type === AlertActions,
   );
+
   const Icon = components.find(
     (child) => React.isValidElement(child) && child.type === AlertIcon,
   );
@@ -41,7 +44,7 @@ export function Alert({ children, className, ...props }: AlertProps) {
       )}
       {...props}
     >
-      <View>{Icon}</View>
+      {Icon}
 
       <View className={'flex-col items-center gap-1'}>
         {Title}
@@ -88,6 +91,6 @@ export function AlertActions({
   );
 }
 
-export function AlertIcon({ children }: AlertIconProps) {
-  return <>{children}</>;
+export function AlertIcon({ children, className }: AlertIconProps) {
+  return <View className={className}>{children}</View>;
 }
