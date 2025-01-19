@@ -3,12 +3,7 @@ import { Controller, useForm } from 'react-hook-form';
 import { View } from 'react-native';
 
 import { useUpdateUser } from '@kit/supabase';
-import {
-  Button,
-  Input,
-  Text,
-  toast,
-} from '@kit/ui';
+import { Button, Input, Text, toast } from '@kit/ui';
 
 import { UpdateUserSchema } from '../lib/hooks/use-update-user';
 

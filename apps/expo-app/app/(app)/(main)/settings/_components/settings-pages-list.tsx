@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Link } from 'expo-router';
 import { ChevronRight } from 'lucide-react-native';
 import { FlatList, View } from 'react-native';
@@ -9,7 +11,7 @@ import { SignOutButton } from './sign-out-button';
 type Page = {
   name: string;
   title: string;
-  href: string;
+  href: React.ComponentProps<typeof Link>['href'];
 };
 
 const pages: Page[] = [

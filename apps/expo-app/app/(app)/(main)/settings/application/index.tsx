@@ -1,5 +1,5 @@
 import { Stack } from 'expo-router';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
 import {
   Card,
