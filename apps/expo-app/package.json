@@ -36,6 +36,7 @@
     "@kit/auth": "workspace:*",
     "@kit/supabase": "workspace:^",
     "@kit/ui": "workspace:*",
+    "@react-native-async-storage/async-storage": "^2.1.0",
     "@react-navigation/native": "catalog:",
     "@tanstack/react-query": "catalog:",
     "expo": "catalog:",
