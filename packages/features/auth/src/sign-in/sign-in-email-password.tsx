@@ -84,7 +84,10 @@ export function SignInEmailPassword() {
           className={'w-full'}
           disabled={signIn.isPending}
           onPress={form.handleSubmit((data) => {
-            signIn.mutate(data);
+            signIn.mutate({
+              email: data.email,
+              password: data.password,
+            });
           })}
         >
           <Text>Sign in</Text>
