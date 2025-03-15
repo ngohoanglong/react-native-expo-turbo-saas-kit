@@ -72,13 +72,23 @@ cd <your-project-name>
 pnpm install
 ```
 
-3. Start the development server
+3. Create .env file
+
+Using the .env.template file as a template, create a .env file in the root of the project.
+
+```bash
+cp .env.template .env
+```
+
+Replace the `EXPO_PUBLIC_SUPABASE_API_URL` with a proxy if you are testing using a device connected to your computer.
+
+4. Start the development server
 
 ```bash
 pnpm dev
 ```
 
-4. Start Supabase
+5. Start Supabase
 
 Run the following command to start Supabase:
 
@@ -86,7 +96,7 @@ Run the following command to start Supabase:
 pnpm run supabase:start
 ```
 
-5. Stop Supabase
+6. Stop Supabase
 
 Run the following command to stop Supabase:
 
