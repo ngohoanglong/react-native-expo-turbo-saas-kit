@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from '@kit/ui';
 
-import { ThemeModeToggle } from './_components/theme-mode-toggle';
+import { ThemeModeToggle } from '../../../../../components/settings/theme-mode-toggle';
 
 export default function ApplicationSettingsPage() {
   return (

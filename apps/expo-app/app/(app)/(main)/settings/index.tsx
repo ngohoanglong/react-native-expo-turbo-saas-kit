@@ -1,4 +1,4 @@
-import { SettingsPagesList } from './_components/settings-pages-list';
+import { SettingsPagesList } from '../../../../components/settings/settings-pages-list';
 
 export default function SettingsPage() {
   return <SettingsPagesList />;
