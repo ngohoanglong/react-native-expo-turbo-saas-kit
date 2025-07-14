@@ -8,7 +8,14 @@ import { Database } from './database.types';
 import { LargeSecureStore } from './large-secure-store';
 
 const storage = Platform.OS === 'web' ? AsyncStorage : new LargeSecureStore();
-
+console.log(
+  'process.env.EXPO_PUBLIC_SUPABASE_API_URL',
+  process.env.EXPO_PUBLIC_SUPABASE_API_URL,
+);
+console.log(
+  'process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY',
+  process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY,
+);
 const { supabaseUrl, supabaseAnonKey } = z
   .object({
     supabaseUrl: z.string(),

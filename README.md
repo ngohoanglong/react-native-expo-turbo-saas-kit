@@ -104,6 +104,9 @@ Run the following command to stop Supabase:
 pnpm run supabase:stop
 ```
 
+7.STUDIO
+http://localhost:54323/project/default/auth/users
+
 ## Documentation
 
 The documentation is not yet available. Please check back later.
