@@ -31,10 +31,13 @@
     "cross-env": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "react": "catalog:",
-    "react-dom": "catalog:",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-is": "catalog:",
     "turbo": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "expo": "^53.0.19"
   }
 }

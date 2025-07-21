@@ -1,3 +1,4 @@
+export { NewImagesNotification } from "./components/new-images-notification";
 export {
   getBackgroundSyncStatus,
   isBackgroundSyncRegistered,

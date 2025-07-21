@@ -4,6 +4,7 @@ import { Redirect, Tabs } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { HomeIcon, SettingsIcon } from 'lucide-react-native';
 
+import { NewImagesNotification } from '@kit/images';
 import {
   AuthProvider,
   AuthProviderLoading,
@@ -33,26 +34,33 @@ export default function MainLayout() {
 
 function MainLayoutTabs() {
   return (
-    <Tabs initialRouteName={'index'}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          href: '/',
-          tabBarIcon: () => <HomeIcon className={'h-5'} />,
-        }}
-      />
-
-      <Tabs.Screen
-        name="settings"
-        options={{
-          title: 'Settings',
-          href: '/settings',
+    <>
+      <NewImagesNotification />
+      <Tabs
+        screenOptions={{
           headerShown: false,
-          tabBarIcon: () => <SettingsIcon className={'h-5'} />,
         }}
-      />
-    </Tabs>
+      >
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: 'Home',
+            tabBarIcon: ({ color, size }) => (
+              <HomeIcon color={color} size={size} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="settings"
+          options={{
+            title: 'Settings',
+            tabBarIcon: ({ color, size }) => (
+              <SettingsIcon color={color} size={size} />
+            ),
+          }}
+        />
+      </Tabs>
+    </>
   );
 }
 
