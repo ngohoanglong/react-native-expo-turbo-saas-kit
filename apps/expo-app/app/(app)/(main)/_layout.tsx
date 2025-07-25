@@ -1,10 +1,7 @@
-import { useEffect } from 'react';
-
 import { Redirect, Tabs } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { HomeIcon, SettingsIcon } from 'lucide-react-native';
 
-import { NewImagesNotification } from '@kit/images';
 import {
   AuthProvider,
   AuthProviderLoading,
@@ -35,7 +32,6 @@ export default function MainLayout() {
 function MainLayoutTabs() {
   return (
     <>
-      <NewImagesNotification />
       <Tabs
         screenOptions={{
           headerShown: false,
